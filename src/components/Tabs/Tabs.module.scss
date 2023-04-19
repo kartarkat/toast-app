@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    
+    .tabs{
+        
+        display: flex;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        gap: 10px;
+        padding: 0 10px;
+        background: #F0F3F3;
+        box-shadow: 1.5px 1.5px 3px rgba(174, 174, 192, 0.4);
+        border-radius: 0px 0px 10px 10px;
+    
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        
+            .tab {
+                min-width: max-content;
+                padding: 10px 15px;
+                height: 21px;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 21px;
+                text-align: center;
+                color: #4A5662;
+                opacity: 0.4;
+                cursor: pointer;
+            }
+        
+            .activeTab {
+                opacity: 1;
+                color: #3CBCB4;
+                border-bottom: 2px solid #3CBCB4;
+            }
+    }
+
+    .tabContents{
+        margin-top: 10px;
+    }
+}
