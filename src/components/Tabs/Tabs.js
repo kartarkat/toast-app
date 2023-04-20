@@ -15,7 +15,7 @@ function Tabs({ config }) {
 
     const renderTabContents = () => (
         <div className={styles.tabContents}>
-            {currentTab === 'special' ? <Special /> : <FoodItems />}
+            {currentTab === 'special' ? <Special /> : <FoodItems config={config[currentTab]} />}
         </div>
     )
 
