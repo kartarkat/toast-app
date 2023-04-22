@@ -4,23 +4,26 @@ import Header from '../../components/Header'
 import { images } from '../../assets/images'
 import { FoodDataContext } from '../../contexts/FoodDataProvider'
 import Tabs from '../../components/Tabs'
+import HomeMenu from '../../components/HomeMenu'
+
 
 const headerConfig = {
-  image: images.resLogo,
+  image: {src: images.resLogo},
   title: 'Sacred Earth Cafe',
-  icons: [ { src:images.voiceRecord, name: 'Feed Back'} , { src:images.hash, name: 'Contact'} ]
-}  
+  icons: [{ src: images.voiceRecord, name: 'Feed Back' }, { src: images.hash, name: 'Contact' }]
+}
 
 function Home() {
   const { foodData } = useContext(FoodDataContext)
-  const { data: { menu : { menu } }} = foodData
+  const { data: { menu } } = foodData
 
   return (
     <div className={styles.container}>
-        <div className={styles.sectionOne}>
-        <Header config={headerConfig}/>
+      <div className={styles.sectionOne}>
+        <Header config={headerConfig} />
         <Tabs config={menu} />
-        </div>
+      </div>
+      <HomeMenu />
     </div>
   )
 }

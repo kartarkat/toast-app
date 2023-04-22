@@ -14,7 +14,7 @@ function FoodItems({ config }) {
 
     const renderFood = (food) => {
         const { item_name, item_id, item_image_url, item_type, item_price_details } = food
-        const price = item_price_details[0].item_price
+        const price = item_price_details[0]?.item_price 
         return (
             <div ref={itemRef} className={styles.foodContainer} key={item_id}>
                 {item_image_url ? <img className={styles.foodImg} src={item_image_url} alt={item_name} /> : ''}
@@ -27,6 +27,10 @@ function FoodItems({ config }) {
                 </div>
             </div>
         )
+    }
+
+    const renderSpecialFood = (food) => {
+
     }
 
     return (

@@ -5,8 +5,8 @@ import Special from '../Special/Special'
 import FoodItems from '../FoodItems/FoodItems'
 
 function Tabs({ config }) {
-    const tabs = Object.keys(config)
-    tabs.unshift('special')
+    const { menu,  restraunt_details } = config
+    const tabs = Object.keys(menu)
     const [currentTab, setCurrentTab] = useState(tabs[0])
 
     const handleTabClick = (tab) => {
@@ -15,7 +15,7 @@ function Tabs({ config }) {
 
     const renderTabContents = () => (
         <div className={styles.tabContents}>
-            {currentTab === 'special' ? <Special /> : <FoodItems config={config[currentTab]} />}
+            <FoodItems config={menu[currentTab]} />
         </div>
     )
 

@@ -8,17 +8,17 @@ import add from './add.svg'
 import minus from './minus.svg'
 import veg from './veg.svg'
 import nonVeg from './non_veg.svg'
+import lightning from './lightning.svg'
+import menu from './menuOpen.svg'
+import cart from './shoppingBag.svg'
+import arrowRight from './arrowRight.svg'
+import arrowLeft from './arrowLeft.svg'
 
 
 export const images = {
-    feedback,
-    resLogo,
-    hash,
-    voiceRecord,
-    arrowDown,
-    arrowUp,
-    add,
-    minus,
-    veg,
-    nonVeg,
+    feedback, resLogo, hash,
+    voiceRecord, arrowDown, arrowUp,
+    add, minus, veg, nonVeg,
+    lightning, menu, cart,
+    arrowRight, arrowLeft
 }
